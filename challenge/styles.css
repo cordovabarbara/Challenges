@@ -1,0 +1,113 @@
+    @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+--Orange: hsl(25, 97%, 53%);
+--White: hsl(0, 0%, 100%);
+--LightGrey: hsl(217, 12%, 63%);
+--MediumGrey: hsl(216, 12%, 54%);
+--DarkBlue: hsl(213, 19%, 18%);
+--VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+}
+
+body {
+    background-color: var(--VeryDarkBlue);
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    border-radius: 1rem;
+    background: rgb(37, 45, 55);
+    background: linear-gradient(0deg,rgba(37, 45, 55, 1) 43%, rgba(53, 68, 87, 1) 100%);
+    padding: 2rem;
+    max-width: 400px;
+    display: grid;
+    gap: 1rem;
+}
+
+.box__logo {
+    background-color: var(--DarkBlue);
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box__title {
+    color: var(--White);
+    font-size: 1.5rem;
+}
+
+.box__parag {
+    color: var(--MediumGrey);
+    line-height: 1.6rem;
+}
+
+.box__ranking {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ranking__choose {
+    background-color: var(--DarkBlue);
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition:   background-color 0.5s;
+}
+
+.ranking__choose:hover {
+    background-color: var(--Orange);
+}
+
+
+.ranking__choose span {
+    font-weight: 700;
+    color: var(--MediumGrey);
+    transition: color 0.5s;
+}
+
+.ranking__choose:hover span {
+    color: var(--White);
+}
+
+.submit__btn {
+    padding: 1rem;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--White);
+    background-color: var(--Orange);
+    border-radius: 1.5rem;
+    border: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.5s, background-color 0.5s, color 0.5s, border 0.5s;
+}
+
+.submit__btn:active {
+    transform: scale(1.05);
+    background-color: var(--White);
+    border-radius: 1.5rem;
+    color: var(--Orange);
+    border: 2px solid var(--Orange);
+}
